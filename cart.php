@@ -137,47 +137,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-
-
-									<?php
-
-									include_once "parts.php";
-	$parts = new parts();
-
-
-	$pno = "";
-						$pname="";
-						$qoh="";
-						$price="";
-						$olevel="";
-	
-	//2) Call the object's getParts method and check for error
-	if (!$parts->getParts()){
-		echo "error getting Items";
-	}
-	//check if there is any thing in the textbox
-	else if(isset($_REQUEST['txtSearch'])){
-		//call the database and check if the patient exists
-		$search = $_REQUEST['txtSearch'];
-		$result=$parts->searchParts($search);
-	}
-	
-	// create an increment to change the value of modal and button each time the table loops				
-	$I=0;
-	// else if the search textbox is empty dispay all Parts in a table form
-	while($row=$parts->fetch()){
-          //$pno,$pname,$qoh,$price,$olevel,$nationality,$insurance_type,
-          //$dob,$group,$phone_number,$email, update button
-	$I=$I+1;
-		echo"<tr><td style = 'background-color: white '>{$row["pno"]}</td>
-				<td style = 'background-color: white '>{$row["pname"]}</td>
-				<td style = 'background-color: white '>{$row["qoh"]}</td>
-				<td style = 'background-color: white '>{$row["price"]}</td>
-			   	<td style = 'background-color: white '>{$row["olevel"]}</td>
-				<td style = 'background-color: white '>"
-				?>
-						<!--			<td>1</td>
+								<!-- <tr>
+									<td>1</td>
 									<td>
 										<a href="#"><img alt="" class="img-responsive" src="images/cartpage/cart-product-1.png"></a>
 									</td>
@@ -226,11 +187,54 @@
 									<td>
 										190.98$
 									</td>
-								-->
 									<td colspan="2">
-										<a class="checkPageBtn" href="cart.html">Cart</a>
+										<a class="checkPageBtn" href="checkout.html">checkout</a>
 									</td>
-								</tr>
+								</tr> -->
+
+								<?php
+
+									include_once "parts.php";
+									$parts = new parts();
+
+
+									$pno = "";
+									$pname="";
+									$qoh="";
+									$price="";
+									$olevel="";
+									
+									//2) Call the object's getParts method and check for error
+									if (!$parts->getPCart()){
+										echo "error getting Items";
+									}
+									//check if there is any thing in the textbox
+									else if(isset($_REQUEST['search'])){
+										//call the database and check if the patient exists
+										$search = $_REQUEST['search'];
+										$result=$parts->searchParts($search);
+									}
+									
+									// create an increment to change the value of modal and button each time the table loops				
+									$I=0;
+									// else if the search textbox is empty dispay all Parts in a table form
+									while($row=$parts->fetch()){
+								          //$pno,$pname,$qoh,$price,$olevel,$nationality,$insurance_type,
+								          //$dob,$group,$phone_number,$email, update button
+									$I=$I+1;
+										echo"<tr><td style = 'background-color: white '>{$row["pno"]}</td>
+												<td style = 'background-color: white '>Image</td>
+												<td style = 'background-color: white '>{$row["pname"]}</td>
+												<td style = 'background-color: white '>
+													<form id='qua_in_2' action='action_page.php'>
+														<input type='number' value='1' name='quantity' min='1' max='1'>
+													</form></td>
+												<td style = 'background-color: white '>{$row["price"]}</td>
+											   	<td style = 'background-color: white '>{$row["olevel"]}</td>
+												<td style = 'background-color: white '><a class='checkPageBtn' href='cart.html'>Add</a>
+																	</td>" ;
+											}
+								?>
 							</tbody>
 						</table>
 					</div>

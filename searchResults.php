@@ -87,7 +87,7 @@
 									<li><a href="#">OFFERS</a></li>
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
-										<a href="#"><img src="images/menu_icon_img.png" alt="" /></a>
+										<a href="cart.html"><img src="images/menu_icon_img.png" alt="" /></a>
 										<span>10</span>
 									</li>
 								</ul>
@@ -149,10 +149,10 @@
 
 
 	$pno = "";
-						$pname="";
-						$qoh="";
-						$price="";
-						$olevel="";
+	$pname="";
+	$qoh="";
+	$price="";
+	$olevel="";
 	
 	//2) Call the object's getParts method and check for error
 	if (!$parts->getParts()){
@@ -173,13 +173,15 @@
           //$dob,$group,$phone_number,$email, update button
 	$I=$I+1;
 		echo"<tr><td style = 'background-color: white '>{$row["pno"]}</td>
+				<td style = 'background-color: white '></td>
 				<td style = 'background-color: white '>{$row["pname"]}</td>
 				<td style = 'background-color: white '>{$row["qoh"]}</td>
 				<td style = 'background-color: white '>{$row["price"]}</td>
 			   	<td style = 'background-color: white '>{$row["olevel"]}</td>
-				<td style = 'background-color: white '>" ;
+				<td style = 'background-color: white '><a class='checkPageBtn' href='cart.html'>Add</a>
+									</td>" ;
 			}
-				?>
+?>
 						<!--			<td>1</td>
 									<td>
 										<a href="#"><img alt="" class="img-responsive" src="images/cartpage/cart-product-1.png"></a>
@@ -230,9 +232,9 @@
 										190.98$
 									</td>
 								-->
-									<td colspan="2">
-										<a class="checkPageBtn" href="cart.html">Cart</a>
-									</td>
+									<!-- <td colspan="2">
+										<a class="checkPageBtn" href="cart.html">Add</a>
+									</td -->>
 								</tr>
 							</tbody>
 						</table>

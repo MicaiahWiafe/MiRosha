@@ -46,6 +46,30 @@
      	    }
 
           /**  
+          *Function getCart
+          *@param int $filter contains the Patient ID abd retrieves the information from the database
+          */
+               function getCart($filter=false){
+                    $strQuery = "select pno, pname, qoh, price, olevel from cart";
+                    if($filter!=false){
+                         $strQuery=$strQuery . " where $filter";
+                    }
+                    return $this->query($strQuery);
+              }
+
+          /**  
+          *Function addToCart
+          *@param int $filter contains the Patient ID abd retrieves the information from the database
+          */
+               function addToCart($filter=false){
+                    
+                    if($filter!=false){
+                         $strQuery= "insert into `cart` (`pno`) SELECT 'ono' FROM `order` WHERE `pno` = '$filter'";
+                    }
+                    return $this->query($strQuery);
+              }
+
+          /**  
           *Function updateShoes
           *@param int $filter contains $patientID,$username,$firstname,$lastname,$gender,$nationality,$insurance_type,
           *$dob,$group,$phone_number,$email which allow the user to change these details the application.
