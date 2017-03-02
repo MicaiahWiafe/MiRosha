@@ -104,12 +104,8 @@
 							<nav>
 								<ul>
 									<li><a href="index.html">HOME</a></li>
-									<li><a href="#">NEW</i></a></li>
-									<li><a href="#">FEATURED</a></li>
-									<li><a href="#">BLOG</a></li>
-									<li><a href="#">BRAND</a></li>
-									<li><a href="#">OFFERS</a></li>
 									<li><a href="employees_page.php">OUR EMPLOYEES</a></li>
+									<li><a href="customer_page.php">Our CUSTOMERS</a></li>
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
 										<a href="cart.html"><img src="images/menu_icon_img.png" alt="" /></a>

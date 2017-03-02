@@ -86,7 +86,7 @@
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
 										<a href="#"><img src="images/menu_icon_img.png" alt="" /></a>
-										<span>10</span>
+										<!-- <span>10</span> -->
 									</li>
 								</ul>
 							</nav>

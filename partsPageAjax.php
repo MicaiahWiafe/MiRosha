@@ -87,11 +87,10 @@
 					<font color="white">Mi Rosha</font>
 					<!--Links to the other application pages-->
 					<ul>
-			  			<li><a href="">Home</a></li>
-				  		<li><a href="">Edit Patient</a></li>
-			 			<li><a href="">View Patient</a></li>
-			  			<li><a href="">Add New Patient</a></li>
-			  			<li><a href="">Add New Diagnosis</a></li>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="employees_page.php">OUR EMPLOYEES</a></li>
+						<li><a href="customer_page.php">Our CUSTOMERS</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
 			  			<li2 ><a href="logout.php"><font color = 'white'>Logout</font> </a></li2>
 					</ul>
 				</td>
@@ -121,7 +120,7 @@
 					<th><font color = 'white'>Quantity</font></th>
 					<th><font color = 'white'>Price</font></th>
 					<th><font color = 'white'>Olevel</font></th>
-					<th><font color = 'white'>Update this Patient</font></th>
+					<th><font color = 'white'>UPDATE THIS PART</font></th>
 							</tr>";
 				
 	//1) Create object of Parts class
@@ -172,7 +171,7 @@
   				<div class="modal-content">
    					<div class="modal-header">
      					<button id="<?php echo "close".$I; ?>">Exit</button>
-     				    <h2>Update Patient's Personal Information</h2>
+     				    <h2>Update Part</h2>
    					</div>
    					<div class="modal-body">
    							<!-- Create a form in the modal in order to modify Parts personal information-->
